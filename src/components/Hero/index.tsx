@@ -18,6 +18,7 @@ const Hero = () => {
                 flex
                 flex-wrap-reverse
                 md:max-w-[90vw]
+                mx-auto
 
                 justify-center
                 content-center
