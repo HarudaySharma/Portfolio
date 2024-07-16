@@ -1,5 +1,5 @@
-import Footer from "./Footer"
-import Hero from "./Hero"
+import Footer from "../components/Footer"
+import Hero from "../components/Hero"
 import Projects from "./Projects"
 import Skills from "./Skills"
 
