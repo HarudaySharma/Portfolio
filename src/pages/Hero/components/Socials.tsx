@@ -24,9 +24,7 @@ const Socials = () => {
             className="
                 flex
                 gap-4
-                outline
                 w-full
-                outline-black
                 text-sm
                 justify-center
             "

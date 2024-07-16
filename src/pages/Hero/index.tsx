@@ -1,9 +1,12 @@
 import Pfp from "../../assets/izumi pfp.jpg";
 import ColorModeSwitch from "./components/ColorModeSwitch";
+import Resume from "./components/Resume";
 import Socials from "./components/Socials";
 
 const Hero = () => {
     const name = import.meta.env.VITE_NAME;
+    const pText = import.meta.env.VITE_PARA_TEXT;
+    const role = import.meta.env.VITE_ROLE;
 
     return (
         <section
@@ -14,9 +17,15 @@ const Hero = () => {
                 font-text
                 flex
                 flex-wrap-reverse
-                items-center
                 md:max-w-[90vw]
-                justify-evenly
+
+                justify-center
+                content-center
+                gap-4
+                md:content-normal
+                md:items-center
+                lg:justify-center
+                lg:gap-32
             "
         >
             <div
@@ -39,7 +48,7 @@ const Hero = () => {
                         uppercase
                     "
                 >
-                    {name}
+                    {Boolean(name) ? name : "No Name"}
                 </h1>
                 <h3
                     className="
@@ -50,7 +59,8 @@ const Hero = () => {
                         text-wrap
                     "
                 >
-                    FULL STACK DEVELOPER
+                    {Boolean(role) ? role : "No Role"}
+
                 </h3>
                 <Socials />
                 <p
@@ -59,26 +69,9 @@ const Hero = () => {
                         font-light
                     "
                 >
-                    With a passion for developing modern web apps for commercial businesses.
+                    {Boolean(pText) ? pText : "No text"}
                 </p>
-                <button
-                    type="button"
-                    className="
-                        dark:bg-white
-                        dark:text-black
-                        bg-black
-                        text-white
-                        font-bold
-                        md:text-xl
-                        rounded-xl
-                        w-fit
-                        px-4
-                        py-2
-
-                    "
-                >
-                    Resume
-                </button>
+                <Resume />
             </div>
             <div
                 id="colorMode"

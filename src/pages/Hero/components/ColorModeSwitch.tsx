@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import setPageTheme from '../../../utils/setPageTheme';
 
