@@ -12,12 +12,12 @@ const Hero = () => {
         <section
             id="Hero"
             className="
-                h-[100vh]
-                max-h-[100vh]
+                h-[100dvh]
+                max-h-[100dvh]
                 font-text
                 flex
                 flex-wrap-reverse
-                md:max-w-[90vw]
+                md:max-w-[90dvw]
                 mx-auto
 
                 justify-center

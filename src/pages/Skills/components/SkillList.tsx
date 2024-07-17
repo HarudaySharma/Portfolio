@@ -15,8 +15,6 @@ const SkillList = () => {
             title='skills'
             className='
                 flex 
-                font-text
-                font-light
                 flex-col
                 flex-wrap
                 gap-8

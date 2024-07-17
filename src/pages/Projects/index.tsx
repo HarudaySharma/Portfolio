@@ -5,21 +5,19 @@ const Projects = () => {
         <section
             id="Projects"
             className="
-                h-[100vh]
-                max-h-[100vh]
                 font-text
                 flex
                 flex-col
-                md:max-w-[90vw]
+                md:max-w-[90dvw]
                 mx-auto
 
                 justify-center
                 content-center
-                gap-4
                 md:content-normal
                 md:items-center
                 lg:justify-center
-                lg:gap-32
+                gap-16
+                lg:gap-24
             "
         >
             <h1

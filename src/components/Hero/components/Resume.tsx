@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../../Button';
 
 // TODO: make the Resume downloadable
 const Resume = () => {
@@ -7,24 +8,12 @@ const Resume = () => {
     };
 
     return (
-        <button
+        <Button
             type="button"
             onClick={onClickHandler}
-            className="
-                dark:bg-white
-                dark:text-black
-                bg-black
-                text-white
-                font-bold
-                md:text-xl
-                rounded-xl
-                w-fit
-                px-4
-                py-2
-            "
         >
             Resume
-        </button>
+        </Button>
     )
 }
 

@@ -1,21 +1,17 @@
-import SkillList from './components/SkillList'
+import React from 'react'
+import ContactForm from './components/ContactForm'
 
-const Skills = () => {
+const Contact = () => {
     return (
         <section
-            id="Projects"
+            id="Contact"
             className="
                 font-text
                 flex
                 flex-col
                 md:max-w-[90dvw]
                 mx-auto
-
-                justify-center
-                content-center
-                md:content-normal
-                md:items-center
-                lg:justify-center
+                items-center
                 gap-16
                 lg:gap-24
             "
@@ -29,11 +25,11 @@ const Skills = () => {
                     uppercase
                 "
             >
-                Skills
+                Contact
             </h1>
-            <SkillList />
+            <ContactForm />
         </section>
     )
 }
 
-export default Skills
+export default Contact
