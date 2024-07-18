@@ -4,6 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 type SOCIALS = {
     name: 'github' | 'facebook' | 'instagram' | 'linkedin';
     logo: IconType
+    redirectUrl: string;
 }
 
 const Socials = () => {
@@ -11,10 +12,13 @@ const Socials = () => {
         {
             name: 'github',
             logo: FaGithub,
+            redirectUrl: import.meta.env.VITE_GITHUB_URL,
+
         },
         {
             name: 'linkedin',
             logo: FaLinkedin,
+            redirectUrl: import.meta.env.VITE_LINKEDIN_URL,
         }
     ]
 
@@ -29,17 +33,25 @@ const Socials = () => {
                 justify-center
             "
         >
-            {socials.map(({ name, logo: Logo }) => (
+            {socials.map(({ name, logo: Logo, redirectUrl }) => (
                 <li
                     key={name}
+                    className='
+                        w-fit
+                    '
                 >
-                    <Logo
-                        size={32}
-                        className="
-                        dark:bg-black
-                        bg-white
-                    "
-                    />
+                    <a
+                        href={redirectUrl}
+                        target='_blank'
+                    >
+                        <Logo
+                            size={32}
+                            className="
+                                dark:bg-black
+                                bg-white
+                            "
+                        />
+                    </a>
                 </li>
             ))}
         </ul>

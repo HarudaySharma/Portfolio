@@ -20,31 +20,31 @@ const ProjectList = () => {
             name: 'Auth-App',
             desc: 'basic authentication.',
             imageSrc: authAppImg,
-            websiteUrl: 'https://signauth.vercel.app'
+            websiteUrl: 'https://github.com/HarudaySharma/project-auth'
         },
         {
             name: 'Discussion-App',
             desc: 'ask questions, get answers.',
             imageSrc: disccussionAppImg,
-            websiteUrl: 'https://discussionapp.vercel.app',
+            websiteUrl: 'https://github.com/HarudaySharma/Discussion-App',
         },
         {
             name: 'Quizzy',
             desc: 'take tests & quizzes of various categories.',
             imageSrc: quizzyImg,
-            websiteUrl: 'https://quizzyweb.vercel.app',
+            websiteUrl: 'https://github.com/HarudaySharma/Quizzy',
         },
         {
             name: 'Waste-Classifier',
             desc: 'tells you the type of waste the photo you gave contains.',
             imageSrc: wasteClassifierImg,
-            websiteUrl: 'https://waste-classifier-client.vercel.app',
+            websiteUrl: 'https://github.com/HarudaySharma/Waste-Classifier',
         },
         {
             name: 'Chatty',
             desc: 'Real time chatting web app.',
             imageSrc: chattyImg,
-            websiteUrl: 'https://chattyweb.vercel.app',
+            websiteUrl: 'https://github.com/HarudaySharma/Chatty',
         },
     ]
 
