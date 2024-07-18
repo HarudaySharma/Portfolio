@@ -7,4 +7,5 @@
 :root {
     --black-color: #222;
     --white-color: #fff;
+    --contact-form-width: min(calc(100dvw - 1em), 24em);
 }

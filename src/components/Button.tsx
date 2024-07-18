@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ButtonHTMLAttributes, ReactNode } from 'react'
+import React, {  ReactNode } from 'react'
 
 interface ButtonProps {
     type: "submit" | "reset" | "button" | undefined;
@@ -39,21 +39,18 @@ const Button: React.FC<ButtonProps> = ({
                 focus-visible:outline
                 focus-visible:outline-2
                 focus-visible:outline-offset-2
-                bg-blue-500
                 text-white
                 dark:bg-white
                 dark:text-black
             `,
                 disabled && "opacity-50 cursor-default",
                 fullWidth && "w-full",
-                secondary ? 'text-gray-900' : 'text-white',
+                secondary ? 'text-red-900' : 'text-black',
                 danger && "bg-rose-500 hover:bg-rose-600 focus-visible:outline-rose-600",
                 !secondary && !danger && `
-                    bg-gray-500
-                    hover:bg-white
-                    focus-visible:outline-white
-                    dark:hover:bg-gray-600
-                    dark:focus-visible:outline-gray-600 
+                    bg-blue-500
+                    hover:bg-blue-400
+                    dark:hover:bg-gray-300
                 `,)}
         >
             {children}

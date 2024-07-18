@@ -11,7 +11,7 @@ const ContactForm = () => {
                 flex-col
                 items-center
                 max-w-[40em]
-                w-24em
+                w-[--contact-form-width]
                 sm:w-[32em]
                 lg:w-[40em]
                 gap-8

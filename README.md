@@ -4,4 +4,7 @@
 
 #### TO-DO 
 -[x] responsive Hero Section
--[ ] Projects Section
+-[ ] align heading to center (check overall website styling)
+-[ ] buttons onClick / hover styling fix
+-[ ] make the Contact form and Resume Button working
+

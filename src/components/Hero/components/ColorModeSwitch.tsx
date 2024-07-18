@@ -10,13 +10,17 @@ const ColorModeSwitch = ({ className }: { className?: string }) => {
     const [colorMode, setColorMode] = useState<ColorMode>(localStorage.theme);
 
     const colorModeClickHandler = () => {
-        if (colorMode == 'dark') {
+        if (colorMode === 'dark') {
             setPageTheme('light')
             setColorMode('light');
         }
-        else {
+        else if (colorMode === 'light') {
             setPageTheme('dark')
             setColorMode('dark');
+        }
+        else {
+            setPageTheme(localStorage.theme === "dark" ? "light" : "dark");
+            setColorMode(localStorage.theme);
         }
     }
 
@@ -25,9 +29,9 @@ const ColorModeSwitch = ({ className }: { className?: string }) => {
             onClick={colorModeClickHandler}
             className={clsx(` `, className)}
         >
-            {colorMode === 'dark'
-                ? <MdDarkMode size={22} />
-                : <MdLightMode size={22} />
+            {colorMode === 'light'
+                ? <MdLightMode size={22} />
+                : <MdDarkMode size={22} />
             }
 
         </div>

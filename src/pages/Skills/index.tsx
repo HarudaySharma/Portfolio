@@ -13,6 +13,7 @@ const Skills = () => {
 
                 justify-center
                 content-center
+                text-center
                 md:content-normal
                 md:items-center
                 lg:justify-center

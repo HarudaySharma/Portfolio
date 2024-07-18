@@ -17,7 +17,9 @@ const Card: React.FC<CardProps> = ({ heading, desc, imageSrc, hyperlink }) => {
                 flex
                 flex-col
                 max-w-56
-                basis-56
+                basis-32
+                sm:basis-40
+                md:basis-56
                 flex-shrink
                 rounded-xl
                 dark:text-white
@@ -40,6 +42,7 @@ const Card: React.FC<CardProps> = ({ heading, desc, imageSrc, hyperlink }) => {
                     h-full
                     rounded-3xl
                     text-center
+                    flex-shrink
                 "
             />
             <h3

@@ -24,7 +24,9 @@ const SkillList = () => {
         >
             {skillSubsets.map((skills, idx) => (
                 <>
-                    <SkillRow skills={skills} />
+                    <SkillRow
+                        skills={skills}
+                    />
                     {idx != skillSubsets.length - 1 &&
                         <hr
                             className='

@@ -3,7 +3,7 @@ import Card from './Card';
 import disccussionAppImg from "../../../assets/discussion-app.png"
 import quizzyImg from "../../../assets/quizzy.png"
 import chattyImg from "../../../assets/chatty.png"
-import authAppImg from "../../../assets/auth-app.jpg"
+import authAppImg from "../../../assets/auth-app.png"
 import wasteClassifierImg from "../../../assets/waste-classifier.png"
 
 type PROJECT = {
@@ -60,6 +60,7 @@ const ProjectList = () => {
         >
             {projects.map((project) => (
                 <Card
+                    key={project.name}
                     heading={project.name}
                     desc={project.desc}
                     hyperlink={project.websiteUrl}
