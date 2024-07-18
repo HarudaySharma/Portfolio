@@ -1,14 +1,12 @@
 import clsx from 'clsx';
 import React from 'react'
-import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
 
 interface InputProps {
     id: string;
     placeholder: string;
     type: React.HTMLInputTypeAttribute | undefined,
     required?: boolean;
-    register?: UseFormRegister<FieldValues>;
-    errors?: FieldErrors;
+    name?: string;
     disabled?: boolean;
 
 }
@@ -18,15 +16,15 @@ const Input: React.FC<InputProps> = ({
     id,
     type,
     required,
-    errors,
+    name,
     disabled,
 
 }) => {
-    {/*...register(id, { required: required })*/ }
     return (
         <input
             type={type}
             id={id}
+            name={name}
             placeholder={placeholder}
             autoComplete={id}
             required={required}

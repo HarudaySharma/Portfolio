@@ -2,10 +2,28 @@ import Button from '../../../components/Button'
 import Input from './Input'
 import TextArea from './TextArea'
 
-// TODO: make it working
+import { useForm, ValidationError } from '@formspree/react';
+import ContactState from './ContactState';
+
+const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
+
 const ContactForm = () => {
+    const [state, handleSubmit] = useForm(endpoint)
+
+    if (state.succeeded) {
+        return (
+            <ContactState
+                show
+                className='text-green-300'
+            >
+                Sent Successfully
+            </ContactState>
+        )
+    }
+
     return (
         <form
+            onSubmit={handleSubmit}
             className='
                 flex
                 flex-col
@@ -22,24 +40,43 @@ const ContactForm = () => {
                 required
                 placeholder='Name'
                 id='name'
+                name='name'
             />
             <Input
-                type='text'
+                type='email'
                 required
                 placeholder='Email'
                 id='email'
+                name='email'
+            />
+            <ValidationError
+                prefix='Email'
+                field='email'
+                errors={state.errors}
             />
             <TextArea
                 required
                 placeholder='Message'
                 id='message'
+                name='message'
+            />
+            <ValidationError
+                prefix='Message'
+                field='message'
+                errors={state.errors}
             />
             <Button
                 type='submit'
+                disabled={state.submitting}
             >
                 Submit
             </Button>
-
+            <ContactState
+                show={!state.submitting && Boolean(state.errors)}
+                className='text-red-300'
+            >
+                Please Try Again
+            </ContactState>
         </form>
     )
 }

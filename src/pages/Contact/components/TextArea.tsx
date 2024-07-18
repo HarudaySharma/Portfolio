@@ -1,13 +1,11 @@
 import clsx from 'clsx';
 import React from 'react'
-import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
 
 interface TextAreaProps {
     id: string;
     placeholder: string;
+    name: string;
     required?: boolean;
-    register?: UseFormRegister<FieldValues>;
-    errors?: FieldErrors;
     disabled?: boolean;
 
 }
@@ -16,14 +14,14 @@ const TextArea: React.FC<TextAreaProps> = ({
     placeholder,
     id,
     required,
-    errors,
+    name,
     disabled,
 
 }) => {
-    {/*...register(id, { required: required })*/ }
     return (
         <textarea
             id={id}
+            name={name}
             placeholder={placeholder}
             autoComplete={id}
             required={required}
