@@ -26,9 +26,12 @@ const Card: React.FC<CardProps> = ({ heading, desc, imageSrc, hyperlink }) => {
                 text-black
                 text-center
                 gap-2
-                hover:transform
-                hover:ease-in-out
-                hover:delay-200
+                transition
+                transform
+                ease-in-out
+                delay-100
+                duration-200
+                hover:scale-105
                 hover:cursor-pointer
             "
         >
@@ -38,6 +41,7 @@ const Card: React.FC<CardProps> = ({ heading, desc, imageSrc, hyperlink }) => {
                 className="
                     dark:bg-white
                     dark:text-black
+                    bg-transparent
                     w-full
                     h-full
                     rounded-3xl

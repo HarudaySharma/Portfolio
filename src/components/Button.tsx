@@ -42,6 +42,14 @@ const Button: React.FC<ButtonProps> = ({
                 text-white
                 dark:bg-white
                 dark:text-black
+                transition
+                transform
+                shadow-md
+                duration-200
+                ease-in-out
+                hover:scale-105
+                active:translate-y-[2px]
+                active:shadow-sm
             `,
                 disabled && "opacity-50 cursor-default",
                 fullWidth && "w-full",

@@ -30,8 +30,28 @@ const ColorModeSwitch = ({ className }: { className?: string }) => {
             className={clsx(` `, className)}
         >
             {colorMode === 'light'
-                ? <MdLightMode size={22} />
-                : <MdDarkMode size={22} />
+                ? <MdLightMode
+                    size={22}
+                    className='
+                        transition
+                        transform
+                        duration-200
+                        ease-in-out
+                        hover:scale-105
+                        active:translate-y-[2px]
+                    '
+                />
+                : <MdDarkMode
+                    size={22}
+                    className='
+                        transition
+                        transform
+                        duration-200
+                        ease-in-out
+                        hover:scale-105
+                        active:translate-y-[2px]
+                    '
+                />
             }
 
         </div>

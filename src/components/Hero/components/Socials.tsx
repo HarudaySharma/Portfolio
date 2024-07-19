@@ -49,6 +49,12 @@ const Socials = () => {
                             className="
                                 dark:bg-black
                                 bg-white
+                                transition
+                                transform
+                                duration-200
+                                ease-in-out
+                                hover:scale-105
+                                active:translate-y-[2px]
                             "
                         />
                     </a>

@@ -1,4 +1,4 @@
-import Pfp from "../../assets/izumi pfp.jpg";
+import Pfp from "../../assets/profile-pic.png"
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import Resume from "./components/Resume";
 import Socials from "./components/Socials";
@@ -97,6 +97,7 @@ const Hero = () => {
                         lg:max-w-[400px]
                         lg:max-h-[400px]
                         rounded-full
+                        dark:bg-white
                     "
                 />
                 <ColorModeSwitch

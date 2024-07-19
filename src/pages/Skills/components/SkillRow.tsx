@@ -8,7 +8,6 @@ interface SkillRowProps {
 const SkillRow: React.FC<SkillRowProps> = ({ skills }) => {
     return (
         <div
-            title='skill-row'
             className='
                 flex 
                 flex-wrap
